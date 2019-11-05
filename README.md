@@ -1,4 +1,5 @@
 # Projeto01-Site-de-Futebol
-Um projeto basico onde eu aplico alguns conhecimentos iniciais de html e css.
+Um projeto basico onde eu exercito e aplico alguns conhecimentos iniciais de html e css.
 
-Gostaria de deixar claro que eu não possuo qualquer tipo de direito sobre as imagens utilizadas neste projeto e todas elas foram disponibilizadas para mim pela equipe Hcode através da plataforma da Udemy.
+Disclaimer:
+  Gostaria de esclarecer que não possuo qualquer tipo de direito sobre as imagens utilizadas neste projeto e que todas elas foram disponibilizadas para mim pela equipe Hcode através do curso "Curso Completo do Desenvolvedor Web" na plataforma da Udemy.
