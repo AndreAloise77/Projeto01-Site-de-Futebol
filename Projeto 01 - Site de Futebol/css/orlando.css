@@ -261,6 +261,14 @@ header #logotipo{
     font-weight: bold;
 }
 
+#news .thumbnails .item-inner {
+    padding: 5px;
+}
+
+#news .thumbnails .item-inner img {
+    width: 100%;
+}
+
 #estatisticas{
     background-color: #5E299A;
     width: 100%;
