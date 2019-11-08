@@ -310,6 +310,32 @@ header #logotipo{
     margin: 0 auto;
 }
 
+#call-to-action-videos {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#call-to-action-videos h2{
+    color: #5E2799;
+    font-family: "OpenSans-Light";
+    font-size: 48px;
+    text-align: center;
+}
+
+#call-to-action-videos hr{
+    border: #FDE192 solid 3px;
+    width: 140px;
+    /*Para alinhar o hr utilizamos a expressão a seguir, ela não só coloca cima/baixo/direita/esquerda como 0,
+    mas também centraliza*/
+    margin: 0 auto;
+}
+
+#call-to-action-videos .row-videos{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #656565;
+}
+
 #call-to-action p{
     margin-top: 60px;
     margin-bottom: 40px;
