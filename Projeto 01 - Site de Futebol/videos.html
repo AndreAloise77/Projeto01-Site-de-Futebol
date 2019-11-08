@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Orlando City
+    </title>
+    <!--Link para o css do bootstrap-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!--Links para os css do OwlCarousel 2 v2.3.4-->
+    <link rel="stylesheet" href="lib/owl.carousel2/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owl.carousel2/dist/assets/owl.theme.default.min.css">
+    <!--Link para o css criado para as classes da página-->
+    <link rel="stylesheet" href="css/orlando.css">
+</head>
+
+<body>
+    <header>
+        <!--Container específico para o logotipo do site-->
+        <!--O Container permite deixar o conteúdo alinhado e no meio-->
+        <div class="container">
+            <!--Link para o logotipo-->
+            <img id="logotipo" src="imagens/orlando-logo.png" alt="Logotipo">
+        </div>
+        <!-- Barra preta no topo do site -->
+        <div class="header-black">
+            <!-- Barra roxa no topo do site, abaixo da preta-->
+            <div class="container">
+                <!--Usamos o float-right para alinhar as imagens no canto direito da tela-->
+                <ul class="float-right">
+                    <!-- Lista na barra preta onde colocaremos as imagens dos times restantes-->
+                    <li class="club-01">
+                        <a href="#"> </a>
+                    </li>
+                    <li class="club-02">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-03">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-04">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-05">
+                        <a href="#"> </a>
+                    </li>
+                    <li class="club-06">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-07">
+                        <a href="#"> </a>
+                    </li>
+                    <li class="club-08">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-09">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-10">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-11">
+                        <a href="#"> </a>
+                    </li>
+                    <li class="club-12">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-13">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-14">
+                        <a href="#"></a>
+                    </li>
+                    <li class="club-15">
+                        <a href="#"> </a>
+                    </li>
+                    <li class="club-16">
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- header-black-->
+
+        <div class="container">
+            <div class="row">
+                <!--Menu de Navegação (barra roxa)-->
+                <nav id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="videos.html">Vídeos</a></li>
+                    <li><a href="#">Tickets</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li class="search">
+                        <div class="input-group mb-3">
+                            <input type="search" placeholder="search" id="input-search">
+                            <span class="input-group-append">
+                                <button type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div><!-- input-group mb3-->
+                    </li>
+                </nav>
+            </div><!-- row-->
+        </div><!-- container-->
+
+    </header>
+    <!--Criar uma section para colocar o banner do site-->
+    <section>
+        <div id="call-to-action-videos">
+            <div class="container">
+                <div class="row-text-center">
+                    <h2 class="text-center">
+                        Vídeos
+                    </h2>
+                    <hr>
+                </div>
+                <div class="row-videos">
+                    <!--O atributo muted agora deve ser implementado, pois os navegadores só estão atribuindo 
+                        o "autoplay" quando seguido do atributo "muted".-->
+                    <!-- <video controls autoplay muted> -->
+                    <!--O comando poster serve para colocarmos uma imagem específica para ser a 
+                        "capa" do vídeo antes do usuário dar o play-->
+                    <video controls poster="imagens/highlights.jpg">
+                        <source src="mp4/highlights.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <!--class call-to-action-->
+    </section>
+
+    <footer>
+        <div class="row row-cinza-claro">
+            <div class="container">
+                <div class="row row-cols">
+                    <div class="col-md-2 text-center">
+                        <!--Link para o logotipo-->
+                        <img class="logotipo-footer" src="imagens/orlando-logo.png" alt="Logotipo">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-4 col-popular-post">
+                                <h4>
+                                    Popular Posts
+                                </h4>
+                                <!--remove a estilização padrão da lista, juntamente da "bolinha" de marcação-->
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <h5>
+                                            Neque porro quisquam est, quister.
+                                        </h5>
+                                        <time>
+                                            January 01, 2016
+                                        </time>
+                                    </li>
+                                    <li>
+                                        <h5>
+                                            Neque porro quisquam est, quister.
+                                        </h5>
+                                        <time>
+                                            January 01, 2016
+                                        </time>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--class col-popular-post-->
+                            <div class="col-md-4 col-links">
+                                <h4>
+                                    Links
+                                </h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-right">
+                                                Tickets
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-angle-right">
+                                                News
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-angle-right">
+                                                Schedule
+                                            </i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!-- class col-links-->
+                            <div class="col-md-4 col-get-in-touch">
+                                <h4>
+                                    Get in touch
+                                </h4>
+                                <address>
+                                    <i class="fa fa-map-marker"></i>
+                                    <span>
+                                        618 E. South Street, Suite 510
+                                        <br>
+                                        Orlando, FL 32801
+                                    </span>
+                                </address>
+                                <p>
+                                    <a href="tel:1855ORLCITY">
+                                        <i class="fa fa-phone"></i>
+                                        1.855.ORL.CITY
+                                    </a>
+                                </p>
+                                <ul class="list-unstyled list-socials">
+                                    <li>
+                                        <a href="#" target="_parent">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_parent">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_parent">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_parent">
+                                            <i class="fab fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!--class list-socials-->
+                            </div>
+                            <!--class col-get-in-touch-->
+                        </div>
+                    </div>
+                </div>
+                <!--class row-cols-->
+            </div>
+        </div>
+        <!--class row-cinza-claro-->
+
+        <div class="row row-cinza-escuro">
+            <div class="container">
+                <p class="float-left">Copyright © Orlando City Soccer 2016. All rights reserved.</p>
+                <p class="float-right text-roxo">Create by André Luis in html</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--Script para carregar o Jquery primeiro pois o javascript necessita dele-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <!--Script para carregar o javascript do bootstrap-->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!--Script para carregar o OwlCarousel. Importante ser depois de carregar o JQuery para não ter erros-->
+    <script src="lib/owl.carousel2/dist/owl.carousel.min.js"></script>
+    <!--Script para carregar o Awesomefont-->
+    <script src="https://kit.fontawesome.com/2d8191dca3.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            /*
+                JQuery sempre responde ao último seletor, que neste caso é o #logotipo
+                Então é possível criar mais de um evento para o mesmo seletor
+                Ex: on("mouseover"..codigo da function..).on("mouseout"..codigo da function..);
+            */
+            $("#logotipo").on("mouseover", function () {
+                //Ao passar o mouse sobre o logotipo, vamos adicionar uma classe chamada efeito,
+                //que modificará o  css do banner
+                $("#banner h1").addClass("efeito");
+            }).on("mouseout", function () {
+                $("#banner h1").removeClass("efeito");
+            });
+            /*
+                Agora vamos aumentar o tamanho da caixa de busca quando o usuário clica nela e a
+                "barrinha" fica piscando ou seja, ela está com um focus ali.
+            */
+            $("#input-search").on("focus", function () {
+
+                $("li.search").addClass("ativo");
+
+            }).on("blur", function () {
+
+                $("li.search").removeClass("ativo");
+
+            });
+            /*
+                Estamos colocando uma responsividade para a exibição da quantidade de intens no carousel
+            */
+            $(".thumbnails").owlCarousel({
+                loop: true,
+                nav: true,
+                margin: 10,
+                navText: ["Anterior", "Próximo"],
+                responsive: {
+                    /*Aqui colocaremos a exibição da quantidade de itens na tela a partir de uma resolução
+                    */
+                    0: {
+                        items: 1
+                    },
+                    480: {
+                        items: 3
+                    },
+                    768: {
+                        items: 4
+                    },
+                    1200: {
+                        items: 6
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
