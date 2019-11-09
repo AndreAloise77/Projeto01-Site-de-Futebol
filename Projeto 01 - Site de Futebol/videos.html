@@ -110,7 +110,7 @@
             <div class="container">
                 <div class="row-text-center">
                     <h2 class="text-center">
-                        Vídeos
+                        Videos
                     </h2>
                     <hr>
                 </div>
@@ -127,6 +127,37 @@
             </div>
         </div>
         <!--class call-to-action-->
+
+        <div id="news" class="container" style="top: 0;">
+            <div>
+                <h2 class="text-center">
+                    Latest Videos
+                </h2>
+                <hr>
+            </div>
+            <div class="row thumbnails owl-carousel owl-theme">
+                <!--Utilizamos o prefixo "data-" para chamar o video que queremos ao clicar no ícone dele-->
+                <!--O que vem depois desse prefixo fica a nosso critério o nome. No caso chamamos de video-->
+                <div class="item" data-video="highlights">
+                    <div class="item-inner">
+                        <img src="imagens/highlights.jpg" alt="Noticia">
+                        <h3>
+                            Highlights
+                        </h3>
+                    </div>
+                </div>
+                <div class="item" data-video="Orlando_City_Foundation_2015">
+                    <div class="item-inner">
+                        <img src="imagens/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+                        <h3>
+                            Orlando City Foundation 2015
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <!--class row thhumbnails-->
+        </div>
+        <!--class container-->
     </section>
 
     <footer>
@@ -259,58 +290,18 @@
     <script src="lib/owl.carousel2/dist/owl.carousel.min.js"></script>
     <!--Script para carregar o Awesomefont-->
     <script src="https://kit.fontawesome.com/2d8191dca3.js" crossorigin="anonymous"></script>
+    <!--Script para carregar todos os efeitos em comuns das páginas-->
+    <script src="js/efeitos.js"></script>
     <script>
-        $(document).ready(function () {
-            /*
-                JQuery sempre responde ao último seletor, que neste caso é o #logotipo
-                Então é possível criar mais de um evento para o mesmo seletor
-                Ex: on("mouseover"..codigo da function..).on("mouseout"..codigo da function..);
-            */
-            $("#logotipo").on("mouseover", function () {
-                //Ao passar o mouse sobre o logotipo, vamos adicionar uma classe chamada efeito,
-                //que modificará o  css do banner
-                $("#banner h1").addClass("efeito");
-            }).on("mouseout", function () {
-                $("#banner h1").removeClass("efeito");
+        $(function () {
+            /*Acessando o seletor thuhmbnails, queremos pegar o item dentro do thumbanils*/
+            $(".thumbnails .item").on("click", function () {
+                /*O this é o próprio seletor, que no caso é o .item*/
+                $("video").attr({
+                    "src": "mp4/" + $(this).data("video") + ".mp4",
+                    "poster": "img/" + $(this).data("video") + ".jpg"
+                });
             });
-            /*
-                Agora vamos aumentar o tamanho da caixa de busca quando o usuário clica nela e a
-                "barrinha" fica piscando ou seja, ela está com um focus ali.
-            */
-            $("#input-search").on("focus", function () {
-
-                $("li.search").addClass("ativo");
-
-            }).on("blur", function () {
-
-                $("li.search").removeClass("ativo");
-
-            });
-            /*
-                Estamos colocando uma responsividade para a exibição da quantidade de intens no carousel
-            */
-            $(".thumbnails").owlCarousel({
-                loop: true,
-                nav: true,
-                margin: 10,
-                navText: ["Anterior", "Próximo"],
-                responsive: {
-                    /*Aqui colocaremos a exibição da quantidade de itens na tela a partir de uma resolução
-                    */
-                    0: {
-                        items: 1
-                    },
-                    480: {
-                        items: 3
-                    },
-                    768: {
-                        items: 4
-                    },
-                    1200: {
-                        items: 6
-                    }
-                }
-            })
         });
     </script>
 </body>
