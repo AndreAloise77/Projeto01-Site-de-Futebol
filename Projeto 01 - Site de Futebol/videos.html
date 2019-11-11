@@ -123,6 +123,12 @@
                     <video controls poster="imagens/highlights.jpg">
                         <source src="mp4/highlights.mp4" type="video/mp4">
                     </video>
+                    </br>
+                    <!--Setando a barra de volume para os vídeos
+                        o step é para setarmos a "sensibilidade" da barra, sua suavidade-->
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+                    </br>
+                    <button type="button" id="btn-play-pause" class="btn btn-success">Play</button>
                 </div>
             </div>
         </div>
@@ -301,6 +307,40 @@
                     "src": "mp4/" + $(this).data("video") + ".mp4",
                     "poster": "img/" + $(this).data("video") + ".jpg"
                 });
+            });
+            /* mousemove serve para pegar o valor enquanto o mouse está se movimentando. Detalhe que só modifica
+                o valor se clicarmos no botão da barra.
+                $("#volume").on("mousemove", function(){
+                Entretanto o change só dispara o evento se ocorrer de fato uma mudança.
+                Ao contrário do mousemove que o evento dispara toda vez que o mouse se move, mesmo
+                não tendo uma mudanção do volume de fato.
+                $("#volume").on("change", function(){
+            */
+            $("#volume").on("mousemove", function () {
+                $("video")[0].volume = parseFloat($(this).val());
+            });
+            //Código com JavaScript para realizar a troca de botões e a opção de play/pause no video
+            $("#btn-play-pause").on("click", function () {
+                //Criamos uma variável video para armazenar o valor da posição 0 do vetor de videos
+                var video = $("video")[0];
+                /*Como não existe a opção para modificar o texto diretamento, fazemos um if-else 
+                para alterar o texto de acordo com a classe atual do botão.
+                */
+                if ($(this).hasClass("btn-success")) {
+                    $(this).text("Pause");
+                    video.play();
+                } else {
+                    $(this).text("Play");
+                    video.pause();
+                }
+                //Modificamos a classe do botão através do comando toggleClass
+                $(this).toggleClass("btn-success btn-danger");
+                /*Obs: Tivemos que colocar esse evento de troca de classe do botão depois de ocorrer a troca
+                    de texto e os eventos de play/pause do video, pois se não iria ficar trocado as imagens do
+                    que aparece para o usuário clicar e do que de fato está acontecendo 
+                    (Ex: iria aparecer o pause com o botão vermelho e o video ia iniciar, enquanto apertar o play
+                    iria causar uma pause no video)
+                */
             });
         });
     </script>
