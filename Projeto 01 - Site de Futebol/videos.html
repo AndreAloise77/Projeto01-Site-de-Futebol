@@ -323,24 +323,34 @@
             $("#btn-play-pause").on("click", function () {
                 //Criamos uma variável video para armazenar o valor da posição 0 do vetor de videos
                 var video = $("video")[0];
+                /*Modificamos a classe do botão através do comando toggleClass
+                    Ao clicar no botão(inicialmente success) já ocorre a troca de classe para danger
+                */
+                $(this).toggleClass("btn-success btn-danger");
                 /*Como não existe a opção para modificar o texto diretamento, fazemos um if-else 
                 para alterar o texto de acordo com a classe atual do botão.
                 */
+               /*Se depois que clicar no botão e a classe mudar para sucesso, isso quer dizer que ela estava
+                    na classe danger ou seja, o video estava parado. Caso contrário ela estava na classe
+                    success ou seja, o video estava rodando.
+               */
                 if ($(this).hasClass("btn-success")) {
-                    $(this).text("Pause");
-                    video.play();
-                } else {
                     $(this).text("Play");
+                    /*Temos que usar a opção de pause aqui pois como A classe estava no danger(pause), primeiro
+                        se realiza a troca de classe para depois proseguir para a troca de texto e o evento de 
+                        pausar o video. Logo quando o botão esá vermelho e clicamos nele, o botão passa a ser
+                        verde (realiza a troca de classe para success), troca-se o texto e o video é pausado.
+                    */
                     video.pause();
+                } else {
+                    $(this).text("Pause");
+                    /*Temos que usar a opção de play aqui pois como A classe estava no success(play), primeiro
+                        se realiza a troca de classe para depois proseguir para a troca de texto e o evento de 
+                        iniciar o video. Logo quando o botão esá verde e clicamos nele, o botão passa a ser
+                        vermelho (realiza a troca de classe para danger), troca-se o texto e o video é iniciado.
+                    */
+                    video.play();
                 }
-                //Modificamos a classe do botão através do comando toggleClass
-                $(this).toggleClass("btn-success btn-danger");
-                /*Obs: Tivemos que colocar esse evento de troca de classe do botão depois de ocorrer a troca
-                    de texto e os eventos de play/pause do video, pois se não iria ficar trocado as imagens do
-                    que aparece para o usuário clicar e do que de fato está acontecendo 
-                    (Ex: iria aparecer o pause com o botão vermelho e o video ia iniciar, enquanto apertar o play
-                    iria causar uma pause no video)
-                */
             });
         });
     </script>
