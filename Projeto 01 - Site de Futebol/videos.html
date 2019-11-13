@@ -306,22 +306,6 @@
     <script src="https://kit.fontawesome.com/2d8191dca3.js" crossorigin="anonymous"></script>
     <!--Script para carregar todos os efeitos em comuns das páginas-->
     <script src="js/efeitos.js"></script>
-    
-    <script>
-		(function(d, p){
-		    var a = new XMLHttpRequest(),
-		        b = d.body;
-		    a.open("GET", p, true);
-		    a.send();
-		    a.onload = function(){
-		        var c = d.createElement("div");
-		        c.style.display = "none";
-		        c.innerHTML = a.responseText;
-		        b.insertBefore(c, b.childNodes[0]);
-		    }
-		})(document, "lib/plyr/dist/sprite.svg");
-	</script>
-    <!---->
     <script>
         $(function () {
             /*Acessando o seletor thuhmbnails, queremos pegar o item dentro do thumbanils*/
@@ -331,6 +315,7 @@
                     "src": "mp4/" + $(this).data("video") + ".mp4",
                     "poster": "imagens/" + $(this).data("video") + ".jpg"
                 });
+		//Teste no console para verificar se está correto o data-video
                 console.log($(this).data("video"));
             });
             /* mousemove serve para pegar o valor enquanto o mouse está se movimentando. Detalhe que só modifica
