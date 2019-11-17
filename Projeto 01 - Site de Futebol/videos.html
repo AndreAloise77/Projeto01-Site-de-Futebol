@@ -117,19 +117,21 @@
                     <hr>
                 </div>
                 <div class="row-videos">
-                    <!--O atributo muted agora deve ser implementado, pois os navegadores só estão atribuindo 
-                        o "autoplay" quando seguido do atributo "muted".-->
-                    <!-- <video controls autoplay muted> -->
-                    <!--O comando poster serve para colocarmos uma imagem específica para ser a 
-                        "capa" do vídeo antes do usuário dar o play-->
-                    <video id="player" controls poster="imagens/highlights.jpg">
-                        <source src="mp4/highlights.mp4" type="video/mp4">
-                        <!--Adicionando uma legenda para o video
-                            label é o que mostra para o usuário na hora de escolher a legenda
-                            srclang é o padrão da linguagem da legenda-->
-                        <track kind="subtitles" label="Pt-Br captions" src="vtt/legendas.vtt" srclang="pt-br" default />
-                    </video>
-                    </br>
+		    <div class="player">
+                    	<!--O atributo muted agora deve ser implementado, pois os navegadores só estão atribuindo 
+                        	o "autoplay" quando seguido do atributo "muted".-->
+                    	<!-- <video controls autoplay muted> -->
+                    	<!--O comando poster serve para colocarmos uma imagem específica para ser a 
+                        	"capa" do vídeo antes do usuário dar o play-->
+                    	<video controls poster="imagens/highlights.jpg">
+                        	<source src="mp4/highlights.mp4" type="video/mp4">
+                        	<!--Adicionando uma legenda para o video
+                            	label é o que mostra para o usuário na hora de escolher a legenda
+                            	srclang é o padrão da linguagem da legenda-->
+                        	<track kind="subtitles" label="Pt-Br captions" src="vtt/legendas.vtt" srclang="pt-br" default />
+                    	</video>
+                    	</br>
+		    </div>
                     <!--Setando a barra de volume para os vídeos
                         o step é para setarmos a "sensibilidade" da barra, sua suavidade-->
                     <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
