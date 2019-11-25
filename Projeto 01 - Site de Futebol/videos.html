@@ -6,6 +6,9 @@
     <title>
         Orlando City
     </title>
+    <!--Meta para iniciar o site na responsividade: Utilizando o viewport-->
+    <!--Obs: A tag meta é muito importante para se colocar informações de configuração no site-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <!--Link para o css do bootstrap-->
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <!--Link para o player de video "plyr"-->
@@ -13,8 +16,11 @@
     <!--Links para os css do OwlCarousel 2 v2.3.4-->
     <link rel="stylesheet" href="lib/owl.carousel2/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="lib/owl.carousel2/dist/assets/owl.theme.default.min.css">
-    <!--Link para o css criado para as classes da página-->
+    <!--Links para os css criados para as classes da página-->
     <link rel="stylesheet" href="css/orlando.css">
+    <!--A ordem aqui é muito importante pois dentro do css mobile vamos sobrescrever algumas configurações
+        já feitas no css do desktop-->
+    <link rel="stylesheet" href="css/orlando-mobile.css">
 </head>
 
 <body>
