@@ -1,0 +1,18 @@
+/* Tamanho padrão para tablets */
+/* somente se vier de uma tela e dentro do () se coloca o tamanho máximo da tela, 
+    que no caso dos tablets o tamanho é de 768px
+*/
+@media only screen and (max-width: 768px) {
+    .header-black ul {
+        display: none;
+    }
+}
+
+/* Tamanho padrão para smartphones */
+/* Como primeiro foi feito o site pensado para Desktop e agora queremos "transformá-lo" para mobile
+    devemos usar o @media para mobile por ultimo. Se o site fosse mobile -> desktop, a versão de mobile
+    do @media viria primeiro.
+*/
+@media only screen and (max-width: 480px) {
+
+}
