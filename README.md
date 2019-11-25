@@ -1,5 +1,5 @@
 # Projeto01-Site-de-Futebol
-Um projeto basico de estudos, onde eu exercito e aplico alguns conhecimentos iniciais de html e css aprendidos no curso  "Curso Completo do Desenvolvedor Web" pela equipe Hcode na plataforma da udemy.
+Um projeto basico de estudos, onde eu exercito e aplico alguns conhecimentos iniciais de html e css aprendidos no curso  "Curso Completo do Desenvolvedor Web" pela equipe Hcode na plataforma da udemy (https://www.udemy.com/course/curso-html5-css3-javascript/).
 
 
 Este projeto roda em conjunto com o XAMPP v3.2.4, utilizando APACHE e MySQL. Então a pasta Projeto01-Site-de-Futebol agora se encontra dentro da pasta C:\xampp\htdocs
