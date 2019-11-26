@@ -269,6 +269,10 @@ header #logotipo{
     width: 100%;
 }
 
+#news .thumbnails .item-inner h3 {
+    text-align: center;
+}
+
 #estatisticas{
     background-color: #5E299A;
     width: 100%;
@@ -505,4 +509,8 @@ footer .list-socials i {
 
 video {     
     width: 70%;
+}
+
+#btn-bars, #btn-search{
+    display: none;
 }
